@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js">
+  <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/fonts_ubuntu/Ubuntu-Regular.ttf">
+  <link rel="icon" href="static/pa-company-linked-letter-logo-free-vector.webp">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>TRAVELER</title>
+  <style>
+    .wrapper {
+      overflow: hidden;
+      max-width: 533px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    }
+    .wrapper .title-text {
+      display: flex;
+      width: 200%;
+    }
+    .wrapper .title {
+      width: 50%;
+      font-size: 35px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .wrapper .slide-controls {
+      position: relative;
+      display: flex;
+      height: 50px;
+      width: 100%;
+      overflow: hidden;
+      margin: 30px 0 10px 0;
+      justify-content: space-between;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+    }
+    .slide-controls .slide {
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 48px;
+      cursor: pointer;
+      z-index: 1;
+      transition: all 0.6s ease;
+    }
+    .slide-controls label.signup {
+      color: #000;
+    }
+    .slide-controls .slider-tab {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      left: 0;
+      z-index: 0;
+      border-radius: 5px;
+      background: -webkit-linear-gradient(left, #cdb0d1, #907e9a);
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    #signup:checked~.slider-tab {
+      left: 50%;
+    }
+    #signup:checked~label.signup {
+      color: #fff;
+      cursor: default;
+      user-select: none;
+    }
+    #signup:checked~label.login {
+      color: #000;
+    }
+    #login:checked~label.signup {
+      color: #000;
+    }
+    #login:checked~label.login {
+      cursor: default;
+      user-select: none;
+    }
+    .wrapper .form-container {
+      width: 100%;
+      overflow: hidden;
+    }
+    .form-container .form-inner {
+      display: flex;
+      width: 200%;
+    }
+    .form-container .form-inner form {
+      width: 50%;
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .form-inner form .field {
+      height: 50px;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .form-inner form .field input {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      padding-left: 15px;
+      border-radius: 5px;
+      border: 1px solid lightgrey;
+      border-bottom-width: 2px;
+      font-size: 17px;
+      transition: all 0.3s ease;
+    }
+    .form-inner form .field input:focus {
+      border-color: #846794;
+      box-shadow: inset 0 0 3px #846794;
+    }
+    .form-inner form .field input::placeholder {
+      color: #999;
+      transition: all 0.3s ease;
+    }
+    form .field input:focus::placeholder {
+      color: #b3b3b3;
+    }
+    .form-inner form .pass-link {
+      margin-top: 5px;
+    }
+    .form-inner form .signup-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .form-inner form .pass-link a,
+    .form-inner form .signup-link a {
+      color: #846794;
+      text-decoration: none;
+    }
+    .form-inner form .pass-link a:hover,
+    .form-inner form .signup-link a:hover {
+      text-decoration: underline;
+    }
+    form .btn {
+      height: 50px;
+      width: 100%;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+    }
+    form .btn .btn-layer {
+      height: 100%;
+      width: 300%;
+      position: absolute;
+      left: -100%;
+      background: -webkit-linear-gradient(right, #DFC0E3, #907e9a, #846794);
+      border-radius: 5px;
+      transition: all 0.4s ease;   
+    }
+    form .btn:hover .btn-layer {
+      left: 0;
+    }
+    form .btn input[type="submit"] {
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      position: relative;
+      background: none;
+      border: none;
+      color: #fff;
+      padding-left: 0;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body class="bg-light" style="font-family: 'Poppins', 'sans-serif';">
+  <!-- Topbar Start -->
+  <div class="container-fluid  pt-3 d-none d-lg-block" style="height: 80px; background-color: #846794">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  text-lg-center mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center">
+            <p><i class="fa fa-envelope me-1"></i>pruthvi911@gamil.com</p>
+            <p class="text-body px-3">|</p>
+            <p><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+          </div>
+        </div>
+        <div class="col-lg-6  text-lg-center">
+          <div class="d-inline-flex align-items-center" style="font-size: 25px;">
+            <a href="https:/www.facebook.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-facebook "></i></a>
+            <a href="https:/www.twitter.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-twitter "></i> </a>
+            <a href="https:/www.linkedin.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-linkedin"></i> </a>
+            <a href="https:/www.instagram.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-instagram"></i></a>
+            <a href="https:/www.youtube.com" target="_blank" class="text-dark pl-2 px-3" href="">
+              <i class="fa fa-youtube-play"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar Start -->
+  <div class="container-fluid position-relative p-0 mb-5">
+    <div class="container-lg position-relative p-1 shadow-lg mt-3 mt-lg-0 " style="z-index: 9; top:-20px;">
+      <nav class="navbar navbar-expand-lg bg-light ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <h1 class="m-0 " id="color"><span class="text-dark">TRAVEL</span>ER</h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+            <ul class="navbar-nav navbar-text" style="font-size: 16px;">
+              <li class="nav-item">
+                <a href="index.html" class="nav-item me-2 nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="Deals & Packages.html" class="nav-item me-2 nav-link">Deals & Packages</a>
+              </li>
+              <li class="nav-item">
+                <a href="destinations.html" class="nav-item me-2 nav-link">destinations</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-item me-2 nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-item me-3 nav-link">Contact</a>
+              </li>
+            </ul>
+            <div class="ml-auto">
+              <a href="signin.html"><i class="fa fa-user-circle-o text-dark mx-2" style="font-size:30px"></a></i>
+              <i class="fa fa-heart-o mx-2 Dream-Place" style="font-size:30px"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+  <div class="wrapper m-auto">
+    <div class="title-text">
+      <div class="title login">
+        Login Form
+      </div>
+      <div class="title signup">
+        Signup Form
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Login</label>
+        <label for="signup" class="slide signup">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form id="form" class="login" onsubmit="return loginValidate()" action="thankyou_page.html">
+          <div class="">
+            <input type="text" class="form-control mt-2 p-3" id="Email" placeholder="Email Address">
+            <div class="error text-danger " id="emailValid">Enter valid email</div>
+          </div>
+          <div class="">
+            <input type="password" class="form-control mt-2 p-3" id="Password" placeholder="Password">
+            <div class="error text-danger " id="passValid">Enter valid password</div>
+          </div>
+          <div class="pass-link mt-1">
+            <a href="#">Forgot password?</a>
+          </div>
+          <input type="submit" class="btn mt-3 " style="background: -webkit-linear-gradient(right, #907294, #907e9a, #846794);" id="Login" value="Login">      
+          <div class="signup-link mt-2">
+            Not a member? <a href="">Signup now</a>
+          </div>
+        </form>
+        <form  id="signForm" class="signup"  onsubmit="return func()" action="thankyou_page.html">
+          <div class="">
+            <input type="text" class="form-control mt-2 p-3" id="signUpEmail" placeholder="Email Address">
+            <div class="error text-danger" id="emailSignValid">Enter Valid Email</div>
+          </div>
+          <div class="">
+            <input type="password" class="form-control mt-2 p-3" id="signUpPassword" placeholder="Password">
+            <div class="error text-danger" id="passSignValid" >Enter Valid password</div>
+          </div>
+          <div class="">
+            <input type="password" class="form-control mt-2 p-3"  id="ConfirmPassword" placeholder="Confirm password">
+            <div class="error text-danger" id="confirmPassValid">password doesn't Match</div>
+          </div>
+          <input type="submit" class="btn mt-3" style="background: -webkit-linear-gradient(right, #907294, #907e9a, #846794);" id="Signup" value="Signup">
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a href="" class="navbar-brand ">
+          <h1 class="travel" id="color"><span class="text-white">TRAVEL</span>ER</h1></a>
+        <p>We offer a wide range of tours to satisfy any traveler’s needs. For those who are searching for a rich cultural experience.</p>
+        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+        <div class="d-flex justify-content-start  " style="font-size: 22px;">
+          <a href="https:/www.facebook.com" target="_blank" class=" me-3 px-2 foot-item"  href="">
+            <i class="fa fa-facebook " ></i></a>
+          <a  href="https:/www.twitter.com" target="_blank" class=" me-3 px-2  foot-item"  href="">
+            <i class="fa fa-twitter " ></i> </a>
+          <a  href="https:/www.linkedin.com" target="_blank" class=" me-3 px-2  foot-item"  href="">
+            <i class="fa fa-linkedin " ></i> </a>
+          <a  href="https:/www.instagram.com" target="_blank" class=" me-3 px-2  foot-item"  href="">
+            <i class="fa fa-instagram " ></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Travel Guide</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="#"><i  class="fa fa-angle-right me-2"></i> Explore Destination</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Ticket Booking</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hotel Booking</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Airlines Travel</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Train Tour</a>
+          <a class="text-white-50 text-decoration-none" href="#"><i class="fa fa-angle-right me-2"></i>Blog</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white-50 text-decoration-none mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="destinations.html"><i class="fa fa-angle-right me-2" ></i>Destinations</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="contact.html"><i class="fa fa-angle-right me-2"></i>Services</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="Deals & Packages.html"><i class="fa fa-angle-right me-2"></i>Packages</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="contact.html"><i class="fa fa-angle-right me-2"></i>Guides</a>
+          <a class="text-white-50 text-decoration-none mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Testimonial</a>
+          <a class="text-white-50 text-decoration-none" href="#"><i class="fa fa-angle-right me-2"></i>Blog</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+        <p><i class="fa fa-envelope mr-2"></i> pruthvi911@gamil.com</p>
+        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
+        <div class="w-100">
+          <div class="input-group">
+            <input type="text" class="form-control border-light" placeholder="Your Email">
+            <div class="input-group-append">
+              <a href="signin.html" class="btn input-group-text" style="border-radius: 3%;" id="bgcolor">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+    style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="row text-center">
+      <p class="m-0 text-white-50">Copyright &copy; <a href="#" id="color" ;>Domain</a>. All Rights Reserved.</a>
+      </p>
+    </div>
+  </div>
+</body>
+<script src="assets/bootstrap-5.2.0-beta1-dist/js/popper.min.js"></script>
+<script src="assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
+<script src="assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+<script src="assets/jquery.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('body').hide().fadeIn();
+  })
+  urlstr = window.location.search;
+  urlParam = new URLSearchParams(urlstr);
+  activity = urlParam.get('activity')
+  if (activity == 'signup') {
+    
+    $('#signupmsg').hide()
+    $('#loginheader').hide()
+    $('#loginmsg').show()
+  }
+  else {
+    $('#phoneno').hide()
+    $('#name').hide()
+    $('#signupheader').hide()
+    $('#signupmsg').show()
+    $('#loginmsg').hide()
+  }
+</script>
+<script>
+  $(document).ready(() => {
+    $("#emailValid").hide();
+    $("#passValid").hide();
+    $("#emailSignValid").hide();
+    $("#passSignValid").hide();
+    $("#confirmPassValid").hide();
+  })
+
+  const loginText = document.querySelector(".title-text .login");
+  const loginForm = document.querySelector("form.login");
+  const loginBtn = document.querySelector("label.login");
+  const signupBtn = document.querySelector("label.signup");
+  const signupLink = document.querySelector("form .signup-link a");
+  signupBtn.onclick = (() => {
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+  });
+  loginBtn.onclick = (() => {
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+  });
+  signupLink.onclick = (() => {
+    signupBtn.click();
+    return false;
+  });
+  function loginValidate() {
+    let Email = document.getElementById("Email").value;
+    let message = document.getElementById("Password").value;
+    let message1 = document.getElementById("ConfirmPassword").value;
+    let flagForm = true;
+    if (Email) {
+      let at_position = Email.indexOf("@");
+      let dot_position = Email.lastIndexOf(".");
+      if (at_position < 1 || dot_position - at_position < 2) {
+        $("#emailValid").show()
+        flagForm=false;
+      }
+      else {
+        $("#emailValid").hide()
+      }
+    }
+    else{
+      $("#emailValid").show()
+      flagForm=false;
+    }
+    if (message == "") {
+      $("#passValid").show()
+      flagForm=false;
+    } else {
+      $("#passValid").hide()
+    }
+    return flagForm;
+  }
+  function func() {
+    let Email = document.getElementById("signUpEmail").value;
+    let message = document.getElementById("signUpPassword").value;
+    let message1 = document.getElementById("ConfirmPassword").value;
+    let flagForm = true;
+    if (Email) {
+      let at_position = Email.indexOf("@");
+      let dot_position = Email.lastIndexOf(".");
+      debugger
+      if (at_position < 1 || dot_position - at_position < 2) {
+        $("#emailSignValid").show()
+        flagForm=false;
+      }
+      else {
+        $("#emailSignValid").hide()
+      }
+    }
+    else{
+      $("#emailSignValid").show()
+      alert("Enter a valid password")
+      flagForm=false;
+    }
+    if (message == "") {
+      $("#passSignValid").show()
+      flagForm=false;
+    } else {
+      $("#passSignValid").hide()
+    }
+    if (message1 == "" && message!=message1) {
+      $("#confirmPassValid").show()
+      flagForm=false;
+    } else {
+      $("#confirmPassValid").hide()
+    }
+    return flagForm;
+  }    
+</script>
+</html>

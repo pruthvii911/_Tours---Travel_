@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<packages>
+    <package>
+        <id>1</id>
+        <name>Thailand </name>
+        <days>25 Days</days>
+        <person> 2 person</person> 
+        <description>beautiful beaches, historical places and eco-attractions.</description> 
+        <rating>4.5 (250)</rating>
+        <price>$4000</price>
+        <image>Thailand-pack.jpg</image>
+    </package>
+    <package>
+        <id>2</id>
+        <name>Bali</name>
+        <days>15 Days</days>
+        <person> 2 person</person> 
+        <description>Glorious mountainous areas with gorgeous waterfalls.</description> 
+        <rating>4.5 (250)</rating>
+        <price>$7000</price>
+        <image>package-4.jpg</image>
+    </package>
+    <package>
+        <id>3</id>
+        <name>Iceland</name>
+        <days>21 Days</days>
+        <person> 2 person</person> 
+        <description>Iceland is famous for its untouched nature.</description> 
+        <rating>4.5 (250)</rating>
+        <price>$5000</price>
+        <image>bali-pack.jpg</image>
+    </package>
+    <package>
+        <id>4</id>
+        <name>Singapore</name>
+        <days>15 Days</days>
+        <person> 2 person</person> 
+        <description>Universal Studios, Night Safari is beautiful attraction. </description> 
+        <rating>4.5 (250)</rating>
+        <price>$6000</price>
+        <image>caption.jpg</image>
+    </package>
+    <package>
+        <id>5</id>
+        <name>Sitamgarh </name>
+        <days>21 Days</days>
+        <person> 6 person</person> 
+        <description>The grandness fictional the kingdom of Sitamgarh .</description> 
+        <rating>4.5 (250)</rating>
+        <price>$2300</price>
+        <image>top-attraction.jpg</image>
+    </package>
+    <package>
+        <id>6</id>
+        <name>Maldiv </name>
+        <days>30 Days</days>
+        <person> 2 person</person> 
+        <description>vibrant culture, pristine beaches, sprawling greenery.</description> 
+        <rating>4.5 (250)</rating>
+        <price>$4500</price>
+        <image>treebo.jpg</image>
+    </package>
+</packages>

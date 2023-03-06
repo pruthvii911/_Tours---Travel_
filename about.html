@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/fonts_ubuntu/Ubuntu-Regular.ttf">
+  <link rel="icon" href="static/pa-company-linked-letter-logo-free-vector.webp">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>TRAVELER</title>
+</head>
+
+<body class="bg-light"> 
+  <!-- Topbar Start -->
+  <div class="container-fluid  pt-3 d-none d-lg-block" style="height: 80px; background-color: #846794">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  text-lg-center mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center">
+            <p><i class="fa fa-envelope me-1"></i>pruthvi911@gamil.com</p>
+            <p class="text-body px-3">|</p>
+            <p><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+          </div>
+        </div>
+        <div class="col-lg-6  text-lg-center">
+          <div class="d-inline-flex align-items-center" style="font-size: 25px;">
+            <a href="https:/www.facebook.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-facebook " ></i></a>
+            <a  href="https:/www.twitter.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-twitter " ></i></a>
+            <a  href="https:/www.linkedin.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-linkedin" ></i> </a>
+            <a  href="https:/www.instagram.com" target="_blank" class="text-dark px-3" href="">
+              <i class="fa fa-instagram" ></i></a>
+            <a href="https:/www.youtube.com" target="_blank" class="text-dark pl-2 px-3" href="">
+              <i class="fa fa-youtube-play" ></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar Start -->
+  <div class="container-fluid position-relative p-0">
+    <div class="container-lg position-relative p-1 shadow-lg mt-3 mt-lg-0 " style="z-index: 9; top:-20px;">
+      <nav class="navbar navbar-expand-lg bg-light ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <h1 class="m-0 " id="color"><span class="text-dark">TRAVEL</span>ER</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+            <ul class="navbar-nav navbar-text" style="font-size: 16px;">
+              <li class="nav-item">
+                <a href="index.html" class="nav-item me-2 nav-link active">Home</a>
+              </li>
+              <li class="nav-item">               
+                <a href="Deals & Packages.html" class="nav-item me-2 nav-link">Deals & Packages</a>
+              </li>
+              <li class="nav-item">                
+                <a href="destinations.html" class="nav-item me-2 nav-link">destinations</a>
+              </li>
+              <li class="nav-item">                
+                <a href="about.html" class="nav-item me-2 nav-link">About Us</a>
+              </li>
+              <li class="nav-item">               
+                <a href="contact.html" class="nav-item me-3 nav-link">Contact</a>
+              </li>
+            </ul>
+            <div class="ml-auto">
+              <a href="signin.html"><i class="fa fa-user-circle-o text-dark mx-2" style="font-size:30px"></a></i>
+              <i class="fa fa-heart-o mx-2 Dream-Place" style="font-size:30px"></i>
+          </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid ">
+    <img src="pictures/qatar-bg.jpeg" alt="" height="100%" width="100%" class="m-2 " style="padding-right:8px;">
+  </div>
+  
+   <!-- Booking Start -->
+        <div class="container-fluid booking mt-5 ">
+          <div class="container pb-5">
+              <div class="bg-light shadow-lg" style="padding: 20px; position: relative; top: -100px;">
+                  <div class="row align-items-center" style="min-height: 60px;">
+                      <div class="col-md-10">
+                          <div class="row">
+                              <div class="col-md-3">
+                                  <div class="mb-3 mb-md-0">
+                                      <select class="custom-select ms-1 form-control" style="height: 35px;">
+                                          <option selected="" class="fw-bolder">Destinations</option>
+                                          <option value="1">Malasiya</option>
+                                          <option value="2">Turkey</option>
+                                          <option value="3">Singapore</option>
+                                          <option value="3">Dubai</option>
+                                          <option value="3">The Amazon</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="col-md-3 pl-2">
+                                <div class="mb-3 mb-md-0">
+                                  <div class="date me-2" id="date1" data-target-input="nearest">
+                                    <input placeholder="Depart Date" class="form-control" type="text" onfocusin="(this.type='date')" onfocusout="(this.type='text')"  id="date"> 
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                  <div class="date me-2" id="date2" data-target-input="nearest">
+                                    <input placeholder="Return Date" class="form-control" type="text" onfocusin="(this.type='date')" onfocusout="(this.type='text')"  id="date"> 
+                                  </div>
+                              </div>
+                              </div>
+                              <div class="col-md-3">
+                                  <div class="mb-3 mb-md-0">
+                                      <select class="custom-select form-control"style="height: 35px;">
+                                          <option selected="" class="fw-bolder">Duration</option>
+                                          <option value="1">15 Days</option>
+                                          <option value="2">20 Days</option>
+                                          <option value="3">30 Days</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="signin.html" class="btn ms-4" id="bgcolor">Book Now</a>                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  <!-- About Start -->
+  <div class="container-fluid py-5">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute " src="pictures/tour.jpeg" style="object-fit: cover;" height=100% width=100%>
+                </div>
+            </div>
+            <div class="col-lg-6 pt-5 pb-lg-5 position-relative" style="left: -60px; top: -10px;">
+                <div class="about-text bg-white shadow-lg p-4 p-lg-5 my-lg-5">
+                    <h6 class="text-uppercase" style="letter-spacing: 5px;" id="color">About Us</h6>
+                    <h2 class="mb-3" style="font-weight: 700;">We Provide Best Tour Packages In Your Budget</h2>
+                    <p>Our mission is simple: to help you have the most of the memorable experience possible on your next vacation. Whether you're looking for a relaxing getaway or an go adrenaline-fueled adventure, we can help you find it.
+                     & We know that when you're ready to go on an adventure, you want it to be perfect. and we providing you  best all  budget & offer. That's why we're here. so all of you have to do is enjoy your trip!</p>
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <img class="img-fluid" src="pictures/about-1.jpg" style="height: 145px; width: 400px;" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid" src="pictures/c-2.jpg" style="height: 145px; width: 400px;" alt="">
+                        </div>
+                    </div>
+                    <a href="signin.html" class="btn  mt-1" id="bgcolor">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feature Start -->
+<div class="container-fluid pb-5 mt-4">
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="d-flex mb-4 mb-lg-0">
+                <div class="feature d-flex flex-shrink-0 align-items-center justify-content-center  me-3" style="height: 100px; width: 100px; " id="bgcolor">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-currency-exchange" viewBox="0 0 16 16">
+                    <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
+                  </svg>
+                </div>
+                <div class="d-flex flex-column">
+                    <h5 class="">Competitive Pricing</h5>
+                    <p class="m-0">We'll take care of all the planning and logistics. your passport and suitcase.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="d-flex mb-4 mb-lg-0">
+                <div class="feature d-flex flex-shrink-0 align-items-center justify-content-center  me-3" style="height: 100px; width: 100px; " id="bgcolor">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                    <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                    <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                  </svg>
+                </div>
+                <div class="d-flex flex-column">
+                    <h5 class="">Best Services</h5>
+                    <p class="m-0">Customized  the perfect way to experience a new place in a way comfortable for you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="d-flex mb-4 mb-lg-0">
+                <div class="feature d-flex flex-shrink-0 align-items-center justify-content-center  me-3" style="height: 100px; width: 100px; " id="bgcolor">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                  </svg>                  
+                </div>
+                <div class="d-flex flex-column">
+                    <h5 class="">Worldwide Coverage</h5>
+                    <p class="m-0">we provide our best services to discover the world in the best way.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Registration Start -->
+<div class="container-fluid bg-dark py-5" style="margin: 90px 0;">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <div class="mb-4">
+          <h6 class=" text-uppercase" style="letter-spacing: 5px;" id="color">Mega Offer</h6>
+          <h1 class="text-white"><span class="offer" id="color" >30% OFF</span> For Honeymoon</h1>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3 mb-md-0">
+                    <select class="custom-select form-control"style="height: 35px;">
+                        <option selected="" class="fw-bolder">Honeymoon-Place </option>
+                        <option value="1">Bali</option>
+                        <option value="2">Italy</option>
+                        <option value="3">Ireland</option>
+                        <option value="3">Greece</option>
+                        <option value="3">Costa Rica</option>
+                        <option value="3">Mexico</option>
+                        <option value="3">Jamaica</option>
+                        <option value="3">Maldive</option>
+                        <option value="3">Caribbean Islands</option>
+                    </select>
+                </div>
+            </div>
+              <p class="text-white mt-4">The most popular honeymoon destinations include and other Caribbean Islands, as well as the packages. These are just a few of the top honeymoon destinations couples are considering in 2022 and 2023</p>
+              <ul class="list-inline text-white m-0">
+                <li class="py-2"><i class="fa fa-check  me-2" id="color"></i>Couples best places to honeymoon.</li>
+                  <li class="py-2"><i class="fa fa-check  me-2" id="color"></i>Provides a Hotels-Booking.</li>
+                  <li class="py-2"><i class="fa fa-check  me-2" id="color"></i>Gives you all services with packages.</li>
+              </ul>
+            </div>
+          <div class="col-lg-5">
+              <div class="card border-0">
+                <img src="pictures/honey-2.jpg" alt="">               
+              </div>
+              <div class="w-100 mt-4">
+                  <div class="offer centered-item" >
+                    <a href="signin.html" class="btn  mt-1" id="bgcolor">Book Now</a>
+                  </div>               
+              </div>              
+          </div>
+      </div>
+  </div>
+</div>
+   
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+  <div class="row pt-5">
+    <div class="col-lg-3 col-md-6 mb-5">
+      <a href="" class="navbar-brand ">
+        <h1 class="travel" id="color"><span class="text-white">TRAVEL</span>ER</h1></a>
+      <p>We offer a wide range of tours to satisfy any traveler’s needs. For those who are searching for a rich cultural experience.</p>
+      <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+      <div class="d-flex justify-content-start  " style="font-size: 22px;">
+        <a href="https:/www.facebook.com" target="_blank" class=" me-3 px-2 foot-item"  href="">
+          <i class="fa fa-facebook " ></i></a>
+        <a  href="https:/www.twitter.com" target="_blank" class=" me-3 px-2  foot-item"  href="">
+          <i class="fa fa-twitter " ></i></a>
+        <a  href="https:/www.linkedin.com" target="_blank" class=" me-3 px-2  foot-item"  href="">
+          <i class="fa fa-linkedin " ></i></a>
+        <a  href="https:/www.instagram.com" target="_blank" class=" me-3 px-2  foot-item"  href="">
+          <i class="fa fa-instagram " ></i></a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-5">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+      <div class="d-flex flex-column justify-content-start">
+        <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Travel Guide</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i> Explore Destination</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Ticket Booking</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hotel Booking</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Airlines Travel</a>
+        <a class="te-white-50 text-decoration-none mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Train Tour</a>
+        <a class="text-white-50 text-decoration-none" href="#"><i class="fa fa-angle-right me-2"></i>Blog</a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-5">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
+      <div class="d-flex flex-column justify-content-start">
+        <a class="text-white-50 text-decoration-none mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="destinations.html"><i class="fa fa-angle-right me-2" ></i>Destinations</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="contact.html"><i class="fa fa-angle-right me-2"></i>Services</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="Deals & Packages.html"><i class="fa fa-angle-right me-2"></i>Packages</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="contact.html"><i class="fa fa-angle-right me-2"></i>Guides</a>
+        <a class="text-white-50 text-decoration-none mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Testimonial</a>
+        <a class="text-white-50 text-decoration-none" href="#"><i class="fa fa-angle-right me-2"></i>Blog</a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-5">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+      <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+      <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+      <p><i class="fa fa-envelope mr-2"></i> pruthvi911@gamil.com</p>
+      <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
+      <div class="w-100">
+        <div class="input-group">
+          <input type="text" class="form-control border-light" placeholder="Your Email">
+          <div class="input-group-append">
+            <a href="signin.html" class="btn input-group-text" style="border-radius: 3%;" id="bgcolor">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+  style="border-color: rgba(256, 256, 256, .1) !important;">
+  <div class="row text-center">
+    <p class="m-0 text-white-50">Copyright &copy; <a href="#" id="color" ;>Domain</a>. All Rights
+      Reserved.</a>
+    </p>
+  </div>
+</div>
+</body>
+
+<script src="./popper.min.js"></script>
+<script src="assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
+<script src="assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+</html>

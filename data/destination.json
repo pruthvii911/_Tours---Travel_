@@ -1,0 +1,36 @@
+[{
+    "dname":"Haridwar-Rishikesh",
+    "country" :"(india)",
+    "countcity" :19,
+    "img": "HARIDWAR.jpg"
+},
+{
+    "dname":"Asy-Syakirin",
+    "country" :"(Malaysia)",
+    "countcity" :29,
+    "img":"malaysia (1).jpg"
+},
+{
+    "dname":"Hagia Sophia",
+    "country" :"(Istanbul)",
+    "countcity" :30,
+    "img":"tur.jpg"
+},
+{
+    "dname":"Rose Island",
+    "country" :"(Andman-Nikobar)",
+    "countcity" :10,
+    "img":"andman-nik.png"
+},
+{
+    "dname":"Huayna Picchu",
+    "country" :"( The Amazon)",
+    "countcity" :23,
+    "img":"top-attraction.jpg"
+},
+{
+    "dname":"Marina Bay",
+    "country" :"(Singapore)",
+    "countcity" :20,
+    "img":"si..jpg"
+}]
